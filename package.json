@@ -4,6 +4,7 @@
   "description": "A simple PWA test",
   "main": "index.js",
   "scripts": {
+    "build": "npx webpack",
     "test": "test"
   },
   "repository": {
@@ -21,8 +22,10 @@
   },
   "homepage": "https://github.com/fr-kevin/offline-plugin-pwa#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^4.0.0-beta.4",
     "offline-plugin": "^5.0.6",
     "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
