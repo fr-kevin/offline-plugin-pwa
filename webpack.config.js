@@ -15,6 +15,7 @@ module.exports = {
       template: path.resolve(__dirname, "src/template/index.html")
     }),
     new OfflinePlugin({
+      externals: ["/"],
       caches: {
         main: [
           'index.html',
@@ -22,6 +23,12 @@ module.exports = {
           'dist/index.html',
           'dist/index.js',
         ],
+      },
+      ServiceWorker: {
+        events: true,
+        navigateFallbackURL: '/',
+        publicPath: '/sw.js'
+      },
     })
   ]
 };
